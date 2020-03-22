@@ -1,0 +1,62 @@
+/* Box-Model/Box-Sizing */
+
+@mixin box-model($margin, $padding, $box-sizing) {
+    margin: $margin;
+    padding: $padding;
+    box-sizing: $box-sizing;
+}
+
+
+/* Enlaces */
+
+@mixin enlaces($decoration) {
+    text-decoration: $decoration;
+    color: $color_blanco;
+}
+
+
+/* Mixins Media Querys */
+
+
+/*ESTOS MIXINS NO REQUIREN
+PARENTESIS PORQUE LA VARIABLE SE
+INYECTA DE FORMA DIRECTA CON LA 
+SIGUIENTE SYNTAX:
+#{$telefono}
+*/
+
+
+/* Telefono Muy pequeño */
+
+@mixin iphone {
+    @media only screen and (min-width: #{$iphone}) {
+        @content;
+    }
+}
+
+
+/* Telefono */
+
+@mixin telefono {
+    @media only screen and (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+
+/* Tablet */
+
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+
+/* Desktop */
+
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}

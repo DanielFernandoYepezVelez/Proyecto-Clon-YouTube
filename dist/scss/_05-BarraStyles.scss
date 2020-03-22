@@ -1,0 +1,25 @@
+.menu-lateral {
+    grid-area: menu;
+    padding: 1.5rem 0;
+    background-color: $color_negro;
+    a {
+        display: block;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+    .fas {
+        margin: 0 1.5rem;
+        width: 20px;
+        text-align: center;
+        color: red;
+    }
+    hr {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border: solid 0.1px $color_blanco;
+        opacity: 0.1;
+    }
+}

@@ -1,0 +1,98 @@
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+    grid-template-rows: repeat(2, minmax(40px, 100px));
+    grid-row-gap: 0.7rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    grid-template-areas: "logo iconos" "busqueda busqueda";
+    @include telefono {
+        grid-template-columns: auto 1fr minmax(100px, auto);
+        grid-gap: 1rem;
+        grid-template-areas: "logo busqueda iconos";
+        justify-content: space-evenly;
+    }
+    @include tablet {
+        grid-gap: 3.5rem;
+    }
+    @include desktop {
+        grid-gap: 5.5rem;
+    }
+    .contenedor-logo {
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        .btn-menu {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: all 1s ease;
+            cursor: pointer;
+            @include desktop {
+                &:hover {
+                    padding: 0.5rem;
+                    border-radius: 100%;
+                    background-color: rgba($color: #ffffff, $alpha: 0.3);
+                }
+            }
+        }
+        .btn-play {
+            background-color: $color_secundario;
+            font-size: 0.7rem;
+            text-align: center;
+            border-radius: 5px;
+            height: 22px;
+            width: 35px;
+            line-height: 22px;
+        }
+        .text {
+            color: $color_blanco;
+        }
+    }
+    .barra-busqueda {
+        grid-area: busqueda;
+        position: relative;
+        display: none;
+        input[type="text"] {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: $color_blanco;
+            border-color: $color_principal;
+            background-color: $color_negro_claro;
+        }
+        button[type="submit"] {
+            top: 0.5px;
+            width: 30px;
+            height: 33px;
+            border: none;
+            right: 0.5px;
+            bottom: 0.5px;
+            cursor: pointer;
+            position: absolute;
+            color: $color_blanco;
+            border-radius: 0 5px 5px 0;
+            background-color: $color_negro_claro;
+        }
+        @include telefono {
+            display: block;
+        }
+    }
+    .botones-header {
+        grid-area: iconos;
+        font-size: 1.3rem;
+        @include telefono {
+            display: flex;
+            justify-content: space-around;
+            a {
+                margin-right: 0.5rem;
+            }
+        }
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+}

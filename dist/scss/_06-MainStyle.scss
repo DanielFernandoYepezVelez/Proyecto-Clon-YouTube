@@ -1,0 +1,32 @@
+.main {
+    grid-area: contenido;
+    padding: 0.5rem;
+    color: $color_blanco;
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(1, 1fr);
+    grid-gap: 1rem;
+    img {
+        width: 100%;
+    }
+    @include telefono {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "titulo titulo";
+        .titulo {
+            grid-area: titulo;
+        }
+    }
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "titulo titulo titulo";
+        .titulo {
+            grid-area: titulo;
+        }
+    }
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "titulo titulo titulo titulo";
+        .titulo {
+            grid-area: titulo;
+        }
+    }
+}

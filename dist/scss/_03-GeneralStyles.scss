@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    @include box-model(0, 0, inherit);
+}
+
+body {
+    font-family: $fuente_principal;
+    background-color: $color_negro;
+}
+
+a {
+    @include enlaces(none);
+}
+
+
+/* Imagenes Responsivas */
+
+img {
+    max-width: 100%;
+}
+
+
+/* Main Container */
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4rem auto;
+    grid-template-rows: 4rem auto;
+    grid-template-areas: "header header" "menu contenido";
+    transition: all 1s ease;
+}
+
+
+/* Barra Lateral Abierta */
+
+.contenedor.active {
+    grid-template-columns: 15rem auto;
+}
