@@ -49,9 +49,9 @@ img {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 4rem auto;
-  grid-template-rows: 4rem auto;
-  grid-template-areas: "header header" "menu contenido";
-  transition: all 1s ease;
+  grid-template-rows: 4rem auto auto;
+  grid-template-areas: "header header" "menu contenido" "footer footer";
+  transition: all .5s ease;
 }
 
 /* Barra Lateral Abierta */
@@ -101,7 +101,7 @@ img {
 .header .contenedor-logo .btn-menu {
   font-size: 1.5rem;
   margin-right: 1rem;
-  transition: all 1s ease;
+  transition: all .5s ease;
   cursor: pointer;
 }
 
@@ -255,5 +255,22 @@ img {
   }
   .main .titulo {
     grid-area: titulo;
+  }
+}
+
+.footer {
+  margin-top: .5rem;
+  grid-area: footer;
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer p {
+    font-size: 1.4rem;
   }
 }

@@ -33,9 +33,9 @@ img {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 4rem auto;
-    grid-template-rows: 4rem auto;
-    grid-template-areas: "header header" "menu contenido";
-    transition: all 1s ease;
+    grid-template-rows: 4rem auto auto;
+    grid-template-areas: "header header" "menu contenido" "footer footer";
+    transition: all .5s ease;
 }
 
 

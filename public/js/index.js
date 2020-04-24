@@ -14,7 +14,9 @@ function barraLateral() {
         if (contenedor.classList.contains('active')) {
             enlace.style.display = 'none';
         } else {
-            enlace.style.display = 'inline-block';
+            setTimeout(() => {
+                enlace.style.display = 'inline-block';
+            }, 500);
         }
     });
 

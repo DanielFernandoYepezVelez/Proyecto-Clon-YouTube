@@ -27,7 +27,7 @@
         .btn-menu {
             font-size: 1.5rem;
             margin-right: 1rem;
-            transition: all 1s ease;
+            transition: all .5s ease;
             cursor: pointer;
             @include desktop {
                 &:hover {

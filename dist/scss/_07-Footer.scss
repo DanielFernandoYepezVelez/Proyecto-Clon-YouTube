@@ -1,0 +1,12 @@
+.footer {
+    margin-top: .5rem;
+    grid-area: footer;
+    p {
+        color: $color_blanco;
+        text-align: center;
+        font-size: 1.2rem;
+        @include tablet {
+            font-size: 1.4rem;
+        }
+    }
+}
